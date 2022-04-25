@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" min-width="1300px">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/normalize.css">
+    <title>Travellers</title>
+</head>
+
+<body class="body">
+
+    <div class="wrapper">
+        <header class="header">
+            <h2 class="header__title">Путешественники</h2>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar__inner">
+                <div class="sidebar__logo logo">
+                    <img class="logo__img" src="./assets/images/logo.svg" alt="logo">
+                </div>
+
+                <nav class="sidebar__shell navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__wrapper"><a class="navigation__item">Менеджеры</a></li>
+                        <li class="navigation__wrapper"><a class="navigation__item">Путешественники</a></li>
+                        <li class="navigation__wrapper"><a class="navigation__item">Гиды</a></li>
+                        <li class="navigation__wrapper"><a class="navigation__item">Экскурсии</a></li>
+                        <li class="navigation__wrapper"><a class="navigation__item">Оплаты</a></li>
+                        <li class="navigation__wrapper"><a class="navigation__item">Тех.поддержка</a></li>
+                        <li class="navigation__wrapper"><a class="navigation__item">Настройки</a></li>
+                    </ul>
+
+                </nav>
+                <a class="sidebar__btn">Выйти</a>
+            </div>
+
+
+
+
+
+        </aside>
+
+        <main class="main">
+            <div class="main__container">
+                <div class="main__filter">
+                    <div class="main__search search">
+                        <input class="search__input" type="text" placeholder="Поиск по имени, email, телефону">
+                        <button class="search__btn"><img class="search__btn-icon" src="./assets/images/searchIcon.svg"
+                                alt="searchIcon"></button>
+                    </div>
+
+                    <div class="main__form">
+                        <span class="main__label" for="">Сортировать по</span>
+                        <div id="select__input" class="main__select select">
+                            <span id="select__span" class="select span">Последние</span>
+                            <button class="select__btn"><img src="./assets/images/selectArrow.svg" alt=""></button>
+                            <div id="select__choice" class="select__choice">
+                                <div class="select__choice-inner">
+                                    <a class="select__link" href="">Последние</a>
+                                    <a class="select__link" href="">Первые</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="main__form">
+                        <span class="main__label" for="">Дата/Период</span>
+                        <div class="main__input input">
+                            <input class="input__date" type="text" placeholder="Не выбрано">
+                            <button id="id__input__date-btn" class="input__date-btn"><img class="input__date-img"
+                                    src="./assets/images/dateIcon.svg" alt="searchIcon"></button>
+                        </div>
+                        <div class="calendar">
+                            <div class="calendar-header">
+
+                                <div class="year-picker">
+                                    <span class="year-change" id="prev-year">
+                                        <img src="./assets/images/calendarArrow.svg" alt="calendarArrow">
+
+                                    </span>
+                                    <span class="month-picker" id="month-picker">February</span>
+                                    <span id="year">2021</span>
+                                    <span class="year-change" id="next-year">
+                                        <img class="calendar_arrow" src="./assets/images/calendarArrow.svg"
+                                            alt="calendarArrow">
+
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="calendar-body">
+                                <div class="calendar-week-day">
+                                    <div>Вс</div>
+                                    <div>Пн</div>
+                                    <div>Вт</div>
+                                    <div>Ср</div>
+                                    <div>Чт</div>
+                                    <div>Пт</div>
+                                    <div>Сб</div>
+                                </div>
+                                <div class="calendar-days"></div>
+                            </div>
+
+                            <div class="calendar-footer">
+                                <div class="calenar__footer-form">
+                                    <span class="calenar__footer-span">с</span>
+                                    <input class="calendar__input" type="datetime">
+                                </div>
+
+                                <div class="calenar__footer-form">
+                                    <span class="calenar__footer-span">по</span>
+                                    <input class="calendar__input" type="datetime">
+                                </div>
+                            </div>
+                            <div class="month-list"></div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+                <div class="main__content">
+                    <table class="main__table table">
+                        <thead class="table__header">
+                            <tr class="table__header-tr">
+                                <th class="table__header-th">№</th>
+                                <th class="table__header-th">Имя Фамилия</th>
+                                <th class="table__header-th">Телефон</th>
+                                <th class="table__header-th">Email</th>
+                                <th class="table__header-th">Языки</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table__content content">
+                            <tr class="content__tr">
+                                <td class="content__td">23</td>
+                                <td class="content__td">Иванов Иван</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">ivanovivan@gmail.com</td>
+                                <td class="content__td">Ru, Eng</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="content__tr">
+                                <td class="content__td">22</td>
+                                <td class="content__td">Петрова Анастасия</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">petrovaaaaaaaaaaaa@gmail.com</td>
+                                <td class="content__td">Ru, Eng, Be</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                </td>
+                            </tr>
+                            <tr class="content__tr">
+                                <td class="content__td">21</td>
+                                <td class="content__td">Королёв Ибрагил</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">korolev123@gmail.com</td>
+                                <td class="content__td">Ru</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="content__tr">
+                                <td class="content__td">20</td>
+                                <td class="content__td">Гаврилова Ада</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">ada.gavrilova1997@gmail.com</td>
+                                <td class="content__td">Ru, Eng</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr class="content__tr">
+                                <td class="content__td">19</td>
+                                <td class="content__td">Ковалёв Кирилл</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">kovaleeev.kirill@gmail.com</td>
+                                <td class="content__td">Ru</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="content__tr">
+                                <td class="content__td">18</td>
+                                <td class="content__td">Григорьева Дарина</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">darina.grigoreva15@gmail.com</td>
+                                <td class="content__td">Ru, Eng, Be</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="content__tr">
+                                <td class="content__td">17</td>
+                                <td class="content__td">Денисова Валерия</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">denisova.valeria@gmail.com</td>
+                                <td class="content__td">Ru</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="content__tr">
+                                <td class="content__td">16</td>
+                                <td class="content__td">Брагина Лада</td>
+                                <td class="content__td">+7 845 456 45 45</td>
+                                <td class="content__td">ladabragina@gmail.com</td>
+                                <td class="content__td">Ru, Eng</td>
+                                <td class="content__td">
+                                    <div class="button__wrapper">
+                                        <button class="content__td-btn">
+                                            <img class="image" src="./assets/images/tableBtn.svg" alt="">
+                                        </button>
+                                        <div id="btn__modal" class="modal">
+                                            <div class="content__modal">
+                                                <a class="modal__link" href="">Открыть</a>
+                                                <a class="modal__link" href="">Удалить</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a class="pagination__arrow--single" href="#"><img src="./assets/images/arrowSingle.svg"
+                        alt="arrow"></a>
+                <a class="pagintation__arrow--left" href="#"><img src="./assets/images/paginationArrow.svg"
+                        alt="arrow"></a>
+                <a class="active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a class="pagintation__arrow--right" href="#"><img src="./assets/images/paginationArrow.svg" alt=""></a>
+                <a class="pagination__arrow-right--single" href="#"><img src="./assets/images/arrowSingle.svg"
+                        alt=""></a>
+            </div>
+        </main>
+
+    </div>
+
+
+
+    <script src="assets/js/modal.js"></script>
+    <script src="assets/js/calendar.js"></script>
+    <script src="assets/js/select.js"></script>
+</body>
+
+</html>
