@@ -95,6 +95,7 @@ sidebar */
     align-items: center;
     width: 100%;
     height: 48px;
+    transition: .2s;
 }
 
 .navigation__wrapper:hover {
@@ -102,12 +103,16 @@ sidebar */
     color: #FFFFFF;
     background: #8B3EFC;
     padding: 12px 0px 12px 24px;
-    transition: .2s;
     margin-left: -16px;
 }
 
 .navigation__item {
     width: 100%;
+}
+
+.navigation__item:hover,
+.navigation__item:focus{
+    color: #FFFFFF;
 }
 
 /* main */
@@ -165,6 +170,7 @@ sidebar */
 .main__form {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .main__label {
@@ -206,7 +212,7 @@ sidebar */
 
 .select__choice-inner {
     width: 188px;
-    height: 100px;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     padding-left: 15px;
@@ -216,6 +222,11 @@ sidebar */
     background: #FFFFFF;
     box-shadow: 0px 4px 20px rgb(0 0 0 / 7%);
     border-radius: 12px;
+}
+
+.select__link {
+    display: block;
+    width: 100%;
 }
 
 .select__link:hover {
@@ -417,8 +428,7 @@ thead th:nth-child(4) {
 .calendar {
     display: none;
     position: absolute;
-    right: 278px;
-    top: 182px;
+    margin-top: 85px;
     padding: 18px 0;
     height: max-content;
     width: max-content;
