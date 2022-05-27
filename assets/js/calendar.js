@@ -86,9 +86,9 @@ document.querySelector('#next-year').onclick = () => {
 
 //btn click
 
-const btn_input = document.getElementById("id__input__date-btn")
+const main_input = document.getElementById("main__input")
 
-btn_input.onclick = function(event) {
+main_input.onclick = function(event) {
     event.preventDefault()
     if (calendar.style.display == "block") {
         calendar.style.display = "none"
